@@ -104,8 +104,32 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 end
 end)
 
-farm:addButton("ESP", function()
-       for i,v in pairs(game.Players:GetChildren()) do
+farm:addToggle("ESP", "", function(value)
+_G.ESP = value
+end)
+
+farm:addToggle("Spectate Players", " ", function(bool)
+                                    Sp = bool
+                                    local plr1 = game.Players.LocalPlayer.Character.Humanoid
+                                    local plr2 = game.Players:FindFirstChild(Select)
+                                    repeat wait(.1)
+                                        game.Workspace.Camera.CameraSubject = plr2.Character.Humanoid
+                                    until Sp == false 
+                                    game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+end)
+
+farm:addKeybind("Toggle Keybind", Enum.KeyCode.RightControl, function()
+print("Activated Keybind")
+venyx:toggle()
+end, function()
+print("Changed Keybind")
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.ESP then
+               for i,v in pairs(game.Players:GetChildren()) do
             if not v.Character.Head:FindFirstChild("ESP") then
                 local BillboardGui = Instance.new("BillboardGui")
                 local TextLabel = Instance.new("TextLabel")
@@ -128,26 +152,11 @@ farm:addButton("ESP", function()
                 TextLabel.TextSize = 3.000
                 TextLabel.TextStrokeTransparency = 0.000
                 TextLabel.TextWrapped = true
-    end
+            end
+            end
 end
-
 end)
-
-farm:addToggle("Spectate Players", " ", function(bool)
-                                    Sp = bool
-                                    local plr1 = game.Players.LocalPlayer.Character.Humanoid
-                                    local plr2 = game.Players:FindFirstChild(Select)
-                                    repeat wait(.1)
-                                        game.Workspace.Camera.CameraSubject = plr2.Character.Humanoid
-                                    until Sp == false 
-                                    game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
 end)
-
-farm:addKeybind("Toggle Keybind", Enum.KeyCode.RightControl, function()
-print("Activated Keybind")
-venyx:toggle()
-end, function()
-print("Changed Keybind")
 end)
 
 local themes = {
