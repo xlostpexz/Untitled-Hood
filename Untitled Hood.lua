@@ -2,8 +2,8 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Green
 local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 5013109572)
  
  
-local page = venyx:addPage("Auto Farm", 5012544693)
-local farm = page:addSection("Auto Farm")
+local page = venyx:addPage("Give Money Menu", 5012544693)
+local farm = page:addSection("You Need to Have Revolver")
 local theme = venyx:addPage("Theme", 5012544693)
 local colors = theme:addSection("Colors")
 
@@ -12,6 +12,10 @@ mons = {}
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
+
+farm:addButton("Give Money Inf", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-313.566406, 19.6537323, -1178.69446, -0.999712467, 0, 0.0239957981, 0, 1, 0, -0.0239957981, 0, -0.999712467)
+end)
 
 farm:addButton("Give Money Inf", function()
 local player = Select
@@ -32,7 +36,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     {
         Name = "[Revolver]",
         Ammo = game:GetService("Players")[player].DataFolder.Currency,
-        MaxAmmo = {Value = 999999999999 * 9} 
+        MaxAmmo = {Value = 9999999999999 * 9} 
     }
 )
 end)
@@ -85,7 +89,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addDropdown("Select Mons", mons, function(abc)
+farm:addDropdown("Select Players", mons, function(abc)
     Select = abc
 end)
 
