@@ -13,7 +13,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
 
-farm:addButton("Give Money Inf", function()
+farm:addButton("Revolver Buy", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-313.566406, 19.6537323, -1178.69446, -0.999712467, 0, 0.0239957981, 0, 1, 0, -0.0239957981, 0, -0.999712467)
 end)
 
