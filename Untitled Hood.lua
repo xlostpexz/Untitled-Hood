@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Green
 local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 5013109572)
  
  
-local page = venyx:addPage("Give Money Menu", 5012544693)
+local page = venyx:addPage("Give Money", 5012544693)
 local farm = page:addSection("You Need to Have Revolver")
 local theme = venyx:addPage("Theme", 5012544693)
 local colors = theme:addSection("Colors")
@@ -65,7 +65,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Give Money -999", function()
+farm:addButton("Give Money -999t", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -84,7 +84,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     {
         Name = "[Revolver]",
         Ammo = game:GetService("Players")[player].DataFolder.Currency,
-        MaxAmmo = {Value = 999999999999999999999 * 9} 
+        MaxAmmo = {Value = -999999999999999 * 9} 
     }
 )
 end)
