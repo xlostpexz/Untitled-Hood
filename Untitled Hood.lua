@@ -13,7 +13,11 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
 
-farm:addButton("Revolver Buy", function()
+farm:addButton("Double Barrel Buy ลุกซองคู่", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-555.402039, 40.1311607, -1721.48181, 1, 0, 0, 0, 1, 0, 0, 0, 1)    
+end)
+
+farm:addButton("Revolver Buy ลูกโม่", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-313.566406, 19.6537323, -1178.69446, -0.999712467, 0, 0.0239957981, 0, 1, 0, -0.0239957981, 0, -0.999712467)
 end)
 
@@ -100,6 +104,35 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 end
 end)
 
+farm:addButton("ESP", function()
+       for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 200, 0, 20)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 100, 0, 20)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.TextScaled = true
+                TextLabel.TextSize = 3.000
+                TextLabel.TextStrokeTransparency = 0.000
+                TextLabel.TextWrapped = true
+    end
+end
+
+end)
+
 farm:addToggle("Spectate Players", " ", function(bool)
                                     Sp = bool
                                     local plr1 = game.Players.LocalPlayer.Character.Humanoid
@@ -116,7 +149,6 @@ venyx:toggle()
 end, function()
 print("Changed Keybind")
 end)
-
 
 local themes = {
 Background = Color3.fromRGB(24, 24, 24),
