@@ -115,7 +115,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     {
         Name = "[Revolver]",
         Ammo = game:GetService("Players")[player].DataFolder.Currency,
-        MaxAmmo = {Value = 99999999999999} 
+        MaxAmmo = {Value = 10000000000000000} 
     }
 )
 end)
@@ -180,7 +180,7 @@ end
 end)
 
 farm:addButton("Teleport To Players", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end)
 
 farm:addToggle("ESP", "", function(value)
