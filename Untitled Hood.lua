@@ -17,6 +17,10 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
 
+misc:addButton("Discord", function()
+    setclipboard("https://discord.gg/t97DRzvVgN")
+end)
+
 misc:addButton("Toxic Music 18+", function()
 
 local args = {
@@ -26,6 +30,14 @@ local args = {
 
 game:GetService("ReplicatedStorage"):FindFirstChild(".gg/untitledhood"):FireServer(unpack(args))
     
+end)
+
+tp:addButton("Lettuce ผักตัวเล็ก", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-336.881897, 46.3207207, -1321.52344, -0.0857519582, 3.7355246e-08, 0.996316493, 5.38830278e-08, 1, -3.28556951e-08, -0.996316493, 5.08671079e-08, -0.0857519582)
+end)
+
+tp:addButton("Mid Map กลางแมพ", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.271851, 21.0830898, -901.660828, 0.65961647, -7.47884528e-08, -0.751602352, 1.44217225e-08, 1, -8.68486509e-08, 0.751602352, 4.64474006e-08, 0.65961647)
 end)
 
 tp:addButton("Helicopter For AFK", function()
@@ -48,7 +60,7 @@ tp:addButton("Revolver Buy ลูกโม่", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-313.566406, 19.6537323, -1178.69446, -0.999712467, 0, 0.0239957981, 0, 1, 0, -0.0239957981, 0, -0.999712467)
 end)
 
-farm:addButton("Give Money 1M", function()
+farm:addButton("Set Money 1M", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -72,7 +84,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Give Money 100K", function()
+farm:addButton("Set Money 100K", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -96,7 +108,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Give Money Inf", function()
+farm:addButton("Set Money Inf", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -120,7 +132,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Give Money 0", function()
+farm:addButton("Set Money 0", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -144,7 +156,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Give Money -999t", function()
+farm:addButton("Set Money -999t", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
