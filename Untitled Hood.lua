@@ -13,6 +13,10 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
 
+farm:addButton("Food Store ร้านอาหาร", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-491.758972, 9.04687405, -1151.94543, -0.254918456, -5.60639428e-08, -0.966962576, 3.29896608e-08, 1, -6.6676435e-08, 0.966962576, -4.88968226e-08, -0.254918456)
+end)
+
 farm:addButton("Double Barrel Buy ลุกซองคู่", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-555.402039, 40.1311607, -1721.48181, 1, 0, 0, 0, 1, 0, 0, 0, 1)    
 end)
