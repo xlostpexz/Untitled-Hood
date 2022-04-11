@@ -426,6 +426,64 @@ farm:addToggle("Spectate Players", " ", function(bool)
                                     game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
 end)
 
+farm:addButton("Give me Credit every 3 sec [On]", function(value)
+_G.Say = true
+            while wait(3) do
+                if _G.Say then
+    local args = {
+    [1] = "Winnable Hub On Top",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
+end
+end)
+farm:addButton("Give me Credit every 3 sec [Off]", function(value)
+_G.Say = false
+            while wait(3) do
+                if _G.Say then
+    local args = {
+    [1] = "Winnable Hub On Top",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
+end
+end)
+
+farm:addButton("Give Inf Cash All", function()
+
+                for i, v in pairs(game.Players:GetChildren()) do
+                    if v.Name ~= game.Players.LocalPlayer.Name then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,1)
+                            wait(.0)
+                            local player = v.Name
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]", 
+        Ammo = {Value = math.huge*9e9},
+        MaxAmmo = {Value = 0}
+    }
+)
+task.wait(2)
+
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]",
+        Ammo = game:GetService("Players")[player].DataFolder.Currency,
+        MaxAmmo = {Value = 9000000000000000000} 
+    }
+)
+                    end
+                end
+end)
+
 farm:addKeybind("Toggle Keybind", Enum.KeyCode.RightControl, function()
 print("Activated Keybind")
 venyx:toggle()
@@ -485,6 +543,9 @@ end)
 end)
 
 end)
+
+
+    
 
 check:addButton("Check Money", function()
     Notify({
