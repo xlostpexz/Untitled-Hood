@@ -131,6 +131,10 @@ game:GetService("ReplicatedStorage"):FindFirstChild(".gg/untitledhood"):FireServ
     
 end)
 
+misc:addButton("Fake Banned", function()
+    game.Players.LocalPlayer:Kick("You Got Banned Form Untitled Hood!")
+end)
+
 drop:addToggle("Auto Drop 100K","" , function(abcd)
     _G.AutoDrop = abcd
 end)
