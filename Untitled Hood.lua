@@ -6,6 +6,8 @@ local page = venyx:addPage("Give Money", 5012544693)
 local farm = page:addSection("You Need to Have Revolver")
 local page = venyx:addPage("Teleport", 5012544693)
 local tp = page:addSection("Ez Teleport")
+local page = venyx:addPage("Auto Drop", 5012544693)
+local drop = page:addSection("Ez Drop")
 local page = venyx:addPage("Misc", 5012544693)
 local misc = page:addSection("Other")
 local theme = venyx:addPage("Theme", 5012544693)
@@ -30,6 +32,18 @@ local args = {
 
 game:GetService("ReplicatedStorage"):FindFirstChild(".gg/untitledhood"):FireServer(unpack(args))
     
+end)
+
+drop:addToggle("Auto Drop 100K","" , function(abcd)
+    _G.AutoDrop = abcd
+end)
+
+drop:addButton("Fake Food Store [Secert]", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-582.724976, 9.02821827, -732.723633, -0.371271759, 2.42228992e-09, 0.928524256, 4.95081887e-09, 1, -6.29160335e-10, -0.928524256, 4.36336611e-09, -0.371271759)
+end)
+
+drop:addButton("Delete Part At Secert Store", function()
+    game:GetService("Workspace").MAP.Map.SHOP.Part:Destroy()
 end)
 
 tp:addButton("Lettuce ผักตัวเล็ก", function()
@@ -127,7 +141,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     {
         Name = "[Revolver]",
         Ammo = game:GetService("Players")[player].DataFolder.Currency,
-        MaxAmmo = {Value = 10000000000000000} 
+        MaxAmmo = {Value = 100000000000000000} 
     }
 )
 end)
@@ -195,8 +209,8 @@ farm:addButton("Teleport To Players", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end)
 
-farm:addToggle("ESP", "", function(value)
-_G.ESP = value
+farm:addToggle("ESP", "", function(ab)
+_G.ESP = ab
 end)
 
 farm:addToggle("Spectate Players", " ", function(bool)
@@ -248,6 +262,25 @@ spawn(function()
 end
 end)
 end)
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if  _G.AutoDrop then
+
+local args = {
+    [1] = "DropMoney",
+    [2] = "100000"
+}
+
+game:GetService("ReplicatedStorage"):FindFirstChild(".gg/untitledhood"):FireServer(unpack(args))
+        
+end
+end)
+
+end)
+
 end)
 
 local themes = {
