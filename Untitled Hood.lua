@@ -16,8 +16,7 @@ wait(1)
         Title = "Winnable!Hub";
         Duration = 5;
         });
-        
-
+    
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 5013109572)
@@ -33,6 +32,8 @@ local page = venyx:addPage("Admin Base", 5012544693)
 local admin = page:addSection("Admin Base")
 local page = venyx:addPage("Auto Drop", 5012544693)
 local drop = page:addSection("Ez Drop")
+local page = venyx:addPage("Check", 5012544693)
+local check = page:addSection("Check")
 local page = venyx:addPage("Misc", 5012544693)
 local misc = page:addSection("Other")
 local theme = venyx:addPage("Theme", 5012544693)
@@ -297,7 +298,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     {
         Name = "[Revolver]",
         Ammo = game:GetService("Players")[player].DataFolder.Currency,
-        MaxAmmo = {Value = 100000000000000000} 
+        MaxAmmo = {Value = 9000000000000000000} 
     }
 )
 end)
@@ -437,6 +438,23 @@ end)
 
 end)
 
+end)
+
+check:addButton("Check Money", function()
+    Notify({
+        Description = "Money";
+        Title = game:GetService("Players")[Select].DataFolder.Currency.Value;
+        Duration = 5;
+        });
+end)
+
+check:addButton("Check Muscle", function()
+    Notify({
+        Description = "Muscle";
+        Title = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation.Value;
+        Duration = 5;
+        });
+    
 end)
 
 local themes = {
