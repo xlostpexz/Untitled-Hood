@@ -4,8 +4,10 @@ local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 501310957
  
 local page = venyx:addPage("Give Money", 5012544693)
 local farm = page:addSection("You Need to Have Revolver")
-local page = venyx:addPage("Teleport", 5012544693)
-local tp = page:addSection("Ez Teleport")
+local page = venyx:addPage("Teleport + Buy", 5012544693)
+local tp = page:addSection("Ez Teleport + Buy")
+local page = venyx:addPage("Buy Food", 5012544693)
+local food = page:addSection("Food Truck")
 local page = venyx:addPage("Auto Drop", 5012544693)
 local drop = page:addSection("Ez Drop")
 local page = venyx:addPage("Misc", 5012544693)
@@ -19,8 +21,80 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
 
+food:addButton("Chicken", function()
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
+
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[Chicken] - $7")
+end)
+
+food:addButton("HotDog", function()
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
+
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[HotDog] - $8")
+end)
+
+food:addButton("Donut", function()
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
+
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[Donut] - $5")
+end)
+
 misc:addButton("Discord", function()
     setclipboard("https://discord.gg/t97DRzvVgN")
+end)
+
+food:addButton("Hamburger", function()
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
+
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[Hamburger] - $5")
 end)
 
 misc:addButton("Toxic Music 18+", function()
@@ -59,19 +133,58 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.7637
 end)
 
 tp:addButton("High Armor เกราะใหญ่", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.015671, 27.6787167, -1047.90271, -0.760237992, -7.32069623e-08, 0.649644613, -2.50909178e-08, 1, 8.33253964e-08, -0.649644613, 4.7046953e-08, -0.760237992)
-end)
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
 
-tp:addButton("Food Store ร้านอาหาร", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-491.758972, 9.04687405, -1151.94543, -0.254918456, -5.60639428e-08, -0.966962576, 3.29896608e-08, 1, -6.6676435e-08, 0.966962576, -4.88968226e-08, -0.254918456)
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[High-Medium Armor] - $2300")
 end)
 
 tp:addButton("Double Barrel Buy ลุกซองคู่", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-555.402039, 40.1311607, -1721.48181, 1, 0, 0, 0, 1, 0, 0, 0, 1)    
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
+
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[Double-Barrel SG] - $1400")
 end)
 
 tp:addButton("Revolver Buy ลูกโม่", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-313.566406, 19.6537323, -1178.69446, -0.999712467, 0, 0.0239957981, 0, 1, 0, -0.0239957981, 0, -0.999712467)
+local Workspace = game:GetService("Workspace")
+local Players = game.Players.LocalPlayer
+
+local Character = Players.Character
+
+function Buy(Object)
+    local Object = Object
+    local LockPicker = Workspace.Ignored.Shop[Object]
+    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
+    wait(0.5)
+    fireclickdetector(LockPicker.ClickDetector)
+    fireclickdetector(LockPicker.ClickDetector)
+end
+
+Buy("[Revolver] - $1300")
+
 end)
 
 farm:addButton("Set Money 1M", function()
