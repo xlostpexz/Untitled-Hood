@@ -1,3 +1,24 @@
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
+
+
+
+Notify({
+Description = "Loading...";
+Title = "Winnable!Hub";
+Duration = 5;
+});
+
+wait(1)
+
+    Notify({
+        Description = "Success!!";
+        Title = "Winnable!Hub";
+        Duration = 5;
+        });
+        
+
+
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 5013109572)
  
@@ -8,6 +29,8 @@ local page = venyx:addPage("Teleport + Buy", 5012544693)
 local tp = page:addSection("Ez Teleport + Buy")
 local page = venyx:addPage("Buy Food", 5012544693)
 local food = page:addSection("Food Truck")
+local page = venyx:addPage("Admin Base", 5012544693)
+local admin = page:addSection("Admin Base")
 local page = venyx:addPage("Auto Drop", 5012544693)
 local drop = page:addSection("Ez Drop")
 local page = venyx:addPage("Misc", 5012544693)
@@ -118,6 +141,22 @@ end)
 
 drop:addButton("Delete Part At Secert Store", function()
     game:GetService("Workspace").MAP.Map.SHOP.Part:Destroy()
+end)
+
+admin:addButton("Admin Base 1", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(193.903427, 18.0759296, -71.1124725, 0.998161435, 6.43940323e-09, -0.0606110357, -9.43242551e-09, 1, -4.90946945e-08, 0.0606110357, 4.95761405e-08, 0.998161435)
+end)
+
+admin:addButton("Admin Base 2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(160.082489, -37.6854744, -75.8306808, 0.998694122, -4.43762316e-09, -0.0510881729, 3.84243037e-09, 1, -1.17485195e-08, 0.0510881729, 1.15368755e-08, 0.998694122)
+end)
+
+admin:addButton("Admin Base 3", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.976738, -23.8458004, -741.445618, 0.0497155339, -3.19801394e-08, -0.998763442, 7.90371217e-08, 1, -2.80854984e-08, 0.998763442, -7.75430991e-08, 0.0497155339)
+end)
+
+admin:addButton("Destroy Admin Door 2 Press", function()
+game:GetService("Workspace").MAP["Carry update + Map"].Model.Union:Destroy()
 end)
 
 tp:addButton("Lettuce ผักตัวเล็ก", function()
