@@ -38,14 +38,56 @@ local page = venyx:addPage("Check", 5012544693)
 local check = page:addSection("Check")
 local page = venyx:addPage("Misc", 5012544693)
 local misc = page:addSection("Other")
+local page = venyx:addPage("Inf Bullet", 5012544693)
+local inf = page:addSection("Ez Inf Bullet")
 local theme = venyx:addPage("Theme", 5012544693)
 local colors = theme:addSection("Colors")
+
+weapon = {}
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+   table.insert(weapon,v.Name)
+end
 
 mons = {}
 
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
+
+inf:addButton("Inf Bullet", function()
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = Select2, 
+        Ammo = {Value = math.huge*9e9},
+        MaxAmmo = {Value = 0}
+    }
+)
+task.wait(2)
+
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = Select2,
+        Ammo = game:GetService("Players").LocalPlayer.DataFolder.Currency,
+        MaxAmmo = {Value = 9000000000000000000} 
+    }
+)
+end)
+
+inf:addDropdown("Select Gun", weapon, function(abcde)
+    Select2 = abcde
+end)
+
+inf:addButton("Refresh", function()
+        table.clear(weapon)
+for i,v in pairs(game:GetService("Players").LocalPLayer.Backpack:GetChildren()) do
+   table.insert(weapon,v.Name)
+end
+end)
 
 dick:addButton("thinny 1", function()
     while wait() do
