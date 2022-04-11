@@ -73,7 +73,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     {
         Name = Select2,
         Ammo = game:GetService("Players").LocalPlayer.DataFolder.Currency,
-        MaxAmmo = {Value = 9000000000000000000} 
+        MaxAmmo = {Value = Nothing} 
     }
 )
 end)
