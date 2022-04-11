@@ -16,30 +16,36 @@ wait(1)
         Title = "Winnable!Hub";
         Duration = 5;
         });
-    
+wait(.3)
+
+Notify({
+Description = "Thai Language Support";
+Title = "ซัพพอร์ทภาษาไทย";
+Duration = 5;
+});
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 5013109572)
  
  
 local page = venyx:addPage("Give Money", 5012544693)
-local farm = page:addSection("You Need to Have Revolver")
+local farm = page:addSection("You Need to Have Revolver ต้องมีลูกโม่")
 local page = venyx:addPage("Teleport + Buy", 5012544693)
-local tp = page:addSection("Ez Teleport + Buy")
+local tp = page:addSection("Ez Teleport + Buy วาร์ป + ซื้อของ")
 local page = venyx:addPage("Buy Food", 5012544693)
-local food = page:addSection("Food Truck")
+local food = page:addSection("Food Truck ซื้ออาหาร")
 local page = venyx:addPage("Body", 5012544693)
-local dick = page:addSection("Can't Off")
+local dick = page:addSection("Can't Off ปิดไม่ได้")
 local page = venyx:addPage("Admin Base", 5012544693)
-local admin = page:addSection("Admin Base")
+local admin = page:addSection("Admin Base ฐานแอดมิน")
 local page = venyx:addPage("Auto Drop", 5012544693)
-local drop = page:addSection("Ez Drop")
+local drop = page:addSection("Ez Drop ดร็อปเงิน")
 local page = venyx:addPage("Check", 5012544693)
-local check = page:addSection("Check")
+local check = page:addSection("Check เช็ค")
 local page = venyx:addPage("Misc", 5012544693)
-local misc = page:addSection("Other")
+local misc = page:addSection("Other สิ่งอื่นๆ")
 local page = venyx:addPage("Inf Bullet", 5012544693)
-local inf = page:addSection("Ez Inf Bullet")
+local inf = page:addSection("Ez Inf Bullet กระสุนไม่จำกัด")
 local theme = venyx:addPage("Theme", 5012544693)
 local colors = theme:addSection("Colors")
 
@@ -55,7 +61,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
    table.insert(mons,v.Name)
 end
 
-inf:addButton("Inf Bullet", function()
+inf:addButton("Inf Bullet กระสุนไม่จำกัด", function()
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     "Reload",
@@ -78,7 +84,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-inf:addDropdown("Select Gun", weapon, function(abcde)
+inf:addDropdown("Select Gun เลือกปืน", weapon, function(abcde)
     Select2 = abcde
 end)
 
@@ -209,7 +215,7 @@ end
 Buy("[Hamburger] - $5")
 end)
 
-misc:addButton("Toxic Music 18+", function()
+misc:addButton("Toxic Music 18+ เพลง 18+", function()
 
 local args = {
     [1] = "Boombox",
@@ -220,7 +226,7 @@ game:GetService("ReplicatedStorage"):FindFirstChild(".gg/untitledhood"):FireServ
     
 end)
 
-misc:addButton("Fake Banned", function()
+misc:addButton("Fake Banned แบนปลอม", function()
     game.Players.LocalPlayer:Kick("You Got Banned Form Untitled Hood!")
 end)
 
@@ -228,11 +234,11 @@ drop:addToggle("Auto Drop 100K","" , function(abcd)
     _G.AutoDrop = abcd
 end)
 
-drop:addButton("Fake Food Store [Secert]", function()
+drop:addButton("Fake Food Store [Secert] ร้านอาหารปลอม ลับๆ", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-582.724976, 9.02821827, -732.723633, -0.371271759, 2.42228992e-09, 0.928524256, 4.95081887e-09, 1, -6.29160335e-10, -0.928524256, 4.36336611e-09, -0.371271759)
 end)
 
-drop:addButton("Delete Part At Secert Store", function()
+drop:addButton("Delete Part At Secert Store ลบสิ่งต่างๆในร้าน", function()
     game:GetService("Workspace").MAP.Map.SHOP.Part:Destroy()
 end)
 
@@ -319,7 +325,7 @@ Buy("[Revolver] - $1300")
 
 end)
 
-farm:addButton("Set Money 1M", function()
+farm:addButton("Set Money 1M เงินหนึ่งล้าน", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -343,7 +349,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Set Money 100K", function()
+farm:addButton("Set Money 100K เงินหนึ่งเสน", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -367,7 +373,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Set Money Inf", function()
+farm:addButton("Set Money Inf เงินไม่จำกัด", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -391,7 +397,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Set Money 0", function()
+farm:addButton("Set Money 0 เงินเป็นศูนย์", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -415,7 +421,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addButton("Set Money -999t", function()
+farm:addButton("Set Money -999t เงินติดลบ", function()
 local player = Select
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
@@ -439,7 +445,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 )
 end)
 
-farm:addDropdown("Select Players", mons, function(abc)
+farm:addDropdown("Select Players เลือกผู้เล่น", mons, function(abc)
     Select = abc
 end)
 
@@ -450,7 +456,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 end
 end)
 
-farm:addButton("Teleport To Players", function()
+farm:addButton("Teleport To Players วาร์ปไปหาผู้เล่น", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end)
 
@@ -495,7 +501,7 @@ end
 end
 end)
 
-farm:addButton("Give Inf Cash All", function()
+farm:addButton("Give Inf Cash All ให้เงินไม่จำกัดทั้งเซิฟ", function()
 
                 for i, v in pairs(game.Players:GetChildren()) do
                     if v.Name ~= game.Players.LocalPlayer.Name then
