@@ -1,7 +1,7 @@
+setclipboard("https://discord.gg/t97DRzvVgN")
+
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
-
-
 
 Notify({
 Description = "Loading...";
@@ -90,7 +90,7 @@ end)
 
 inf:addButton("Refresh", function()
         table.clear(weapon)
-for i,v in pairs(game:GetService("Players").LocalPLayer.Backpack:GetChildren()) do
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
    table.insert(weapon,v.Name)
 end
 end)
@@ -459,6 +459,9 @@ end)
 farm:addButton("Teleport To Players วาร์ปไปหาผู้เล่น", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end)
+farm:addToggle("Auto Farm Players", "", function(value)
+    _G.autofarm = value
+end)
 
 farm:addToggle("ESP", "", function(ab)
 _G.ESP = ab
@@ -568,6 +571,16 @@ spawn(function()
                 TextLabel.TextWrapped = true
             end
             end
+end
+end)
+end)
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.autofarm then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame * CFrame.new(0,10,0)
 end
 end)
 end)
