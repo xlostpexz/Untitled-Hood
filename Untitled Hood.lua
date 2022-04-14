@@ -28,8 +28,8 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Green
 local venyx = library.new("Winnable Hub | Untitled Hood | Give Money", 5013109572)
  
  
-local page = venyx:addPage("Give Money", 5012544693)
-local farm = page:addSection("You Need to Have Revolver ต้องมีลูกโม่")
+local page = venyx:addPage("Main", 5012544693)
+local farm = page:addSection("Main")
 local page = venyx:addPage("Teleport + Buy", 5012544693)
 local tp = page:addSection("Ez Teleport วาร์ป")
 local tp2 = page:addSection("Ez Buy ซื้อของ")
@@ -163,27 +163,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
         Parent = Game.Players.LocalPlayer.Backpack,
         ClassName = "Tool",
         Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
-        MaxAmmo = {Value = 9999999999999999999999},
-        GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
-        Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
-    }
-) 
-end)
-
-dick:addButton("Fix Size", function()
-local Workspace = game:GetService("Workspace")
-local Players = game.Players.LocalPlayer
-
-local Character = Players.Character
-
-game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
-    "Reload",
-    {
-        Name = "[Revolver]",
-        Parent = Game.Players.LocalPlayer.Backpack,
-        ClassName = "Tool",
-        Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
-        MaxAmmo = {Value = -2000},
+        MaxAmmo = {Value = 999999},
         GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
         Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
     }
