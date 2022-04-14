@@ -163,7 +163,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
         Parent = Game.Players.LocalPlayer.Backpack,
         ClassName = "Tool",
         Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
-        MaxAmmo = {Value = 999999999999999999999999999999999999999999999},
+        MaxAmmo = {Value = 9999999999999999999999},
         GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
         Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
     }
@@ -247,6 +247,22 @@ end)
 
 tp:addButton("High Armor เกราะใหญ่", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(237.421066, 28.3457909, -1047.0332, -0.981201887, 2.52315484e-08, 0.192984015, 2.15813376e-08, 1, -2.10167634e-08, -0.192984015, -1.64568359e-08, -0.981201887)
+end)
+
+farm:addButton("Bounty Set Inf ค่าหัวไม่จำกัด", function()
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]",
+        Parent = Game.Players.LocalPlayer.Backpack,
+        ClassName = "Tool",
+        Ammo = game:GetService("Players")[Select].leaderstats.Wanted,
+        MaxAmmo = {Value = 9000000000000000000},
+        GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
+        Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
+    }
+) 
 end)
 
 farm:addButton("Set Money 1M เงินหนึ่งล้าน", function()
