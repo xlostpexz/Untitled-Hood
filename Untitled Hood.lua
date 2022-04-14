@@ -33,10 +33,8 @@ local farm = page:addSection("You Need to Have Revolver ต้องมีลู
 local page = venyx:addPage("Teleport + Buy", 5012544693)
 local tp = page:addSection("Ez Teleport วาร์ป")
 local tp2 = page:addSection("Ez Buy ซื้อของ")
-local page = venyx:addPage("Buy Food", 5012544693)
-local food = page:addSection("Food Truck ซื้ออาหาร")
 local page = venyx:addPage("Body", 5012544693)
-local dick = page:addSection("Can't Off ปิดไม่ได้")
+local dick = page:addSection("Reset After")
 local page = venyx:addPage("Admin Base", 5012544693)
 local admin = page:addSection("Admin Base ฐานแอดมิน")
 local page = venyx:addPage("Auto Drop", 5012544693)
@@ -111,124 +109,85 @@ for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) 
 end
 end)
 
-dick:addButton("thinny 1", function()
-    while wait() do
-
+dick:addButton("Super Skinny", function()
 local Workspace = game:GetService("Workspace")
 local Players = game.Players.LocalPlayer
 
 local Character = Players.Character
 
-function Buy(Object)
-    local Object = Object
-    local LockPicker = Workspace.Ignored.Shop[Object]
-    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
-    wait(0.5)
-    fireclickdetector(LockPicker.ClickDetector)
-    fireclickdetector(LockPicker.ClickDetector)
-end
-
-Buy("[Lettuce] - $5")
-
-end
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]",
+        Parent = Game.Players.LocalPlayer.Backpack,
+        ClassName = "Tool",
+        Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
+        MaxAmmo = {Value = -999999999999999999999999999999999999999999999},
+        GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
+        Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
+    }
+) 
 end)
 
-dick:addButton("thinny 2", function()
-    
-    
-    while wait() do
 
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("[Lettuce]"))
-
-end
-
-end)
-
-dick:addButton("thinny 3", function()
-    
-    while wait() do
-    
-          game:GetService('VirtualUser'):CaptureController()
-      game:GetService('VirtualUser'):Button1Down(Vector2.new(1280,672))
-      
-end
-
-end)
-
-food:addButton("Chicken", function()
+dick:addButton("Skinny", function()
 local Workspace = game:GetService("Workspace")
 local Players = game.Players.LocalPlayer
 
 local Character = Players.Character
 
-function Buy(Object)
-    local Object = Object
-    local LockPicker = Workspace.Ignored.Shop[Object]
-    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
-    wait(0.5)
-    fireclickdetector(LockPicker.ClickDetector)
-    fireclickdetector(LockPicker.ClickDetector)
-end
-
-Buy("[Chicken] - $7")
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]",
+        Parent = Game.Players.LocalPlayer.Backpack,
+        ClassName = "Tool",
+        Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
+        MaxAmmo = {Value = -15000},
+        GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
+        Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
+    }
+) 
 end)
 
-food:addButton("HotDog", function()
+dick:addButton("Huge", function()
 local Workspace = game:GetService("Workspace")
 local Players = game.Players.LocalPlayer
 
 local Character = Players.Character
 
-function Buy(Object)
-    local Object = Object
-    local LockPicker = Workspace.Ignored.Shop[Object]
-    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
-    wait(0.5)
-    fireclickdetector(LockPicker.ClickDetector)
-    fireclickdetector(LockPicker.ClickDetector)
-end
-
-Buy("[HotDog] - $8")
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]",
+        Parent = Game.Players.LocalPlayer.Backpack,
+        ClassName = "Tool",
+        Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
+        MaxAmmo = {Value = 999999999999999999999999999999999999999999999},
+        GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
+        Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
+    }
+) 
 end)
 
-food:addButton("Donut", function()
+dick:addButton("Fix Size", function()
 local Workspace = game:GetService("Workspace")
 local Players = game.Players.LocalPlayer
 
 local Character = Players.Character
 
-function Buy(Object)
-    local Object = Object
-    local LockPicker = Workspace.Ignored.Shop[Object]
-    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
-    wait(0.5)
-    fireclickdetector(LockPicker.ClickDetector)
-    fireclickdetector(LockPicker.ClickDetector)
-end
-
-Buy("[Donut] - $5")
-end)
-
-misc:addButton("Discord", function()
-    setclipboard("https://discord.gg/t97DRzvVgN")
-end)
-
-food:addButton("Hamburger", function()
-local Workspace = game:GetService("Workspace")
-local Players = game.Players.LocalPlayer
-
-local Character = Players.Character
-
-function Buy(Object)
-    local Object = Object
-    local LockPicker = Workspace.Ignored.Shop[Object]
-    Character.HumanoidRootPart.CFrame = LockPicker.Head.CFrame + Vector3.new(0, 3, 0)
-    wait(0.5)
-    fireclickdetector(LockPicker.ClickDetector)
-    fireclickdetector(LockPicker.ClickDetector)
-end
-
-Buy("[Hamburger] - $5")
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+    "Reload",
+    {
+        Name = "[Revolver]",
+        Parent = Game.Players.LocalPlayer.Backpack,
+        ClassName = "Tool",
+        Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
+        MaxAmmo = {Value = -2000},
+        GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
+        Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
+    }
+) 
 end)
 
 misc:addButton("Toxic Music 18+ เพลง 18+", function()
