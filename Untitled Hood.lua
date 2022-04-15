@@ -185,9 +185,8 @@ misc:addButton("Fake Banned แบนปลอม", function()
     game.Players.LocalPlayer:Kick("User Banned")
 end)
 
-misc:addButton("Anti AFK", function()
-    game:GetService('VirtualUser'):CaptureController()
-    game:GetService('VirtualUser'):Button1Down(Vector2.new(1280,672))
+misc:addToggle("Anti AFK","" , function(value)
+    _G.AutoClicker = value
 end)
 
 drop:addToggle("Auto Drop 100K","" , function(abcd)
@@ -548,6 +547,17 @@ check:addButton("Check Muscle", function()
         Duration = 5;
         });
     
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.AutoClicker then
+    game:GetService('VirtualUser'):CaptureController()
+    game:GetService('VirtualUser'):Button1Down(Vector2.new(1280,672))
+end
+end)
+end)
 end)
 
 local themes = {
