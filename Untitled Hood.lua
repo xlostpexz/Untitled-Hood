@@ -163,7 +163,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
         Parent = Game.Players.LocalPlayer.Backpack,
         ClassName = "Tool",
         Ammo = game:GetService("Players")[Select].DataFolder.Information.MuscleInformation,
-        MaxAmmo = {Value = 999999},
+        MaxAmmo = {Value = 1000},
         GunScript = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].GunScript,
         Handle = game:GetService("Players").LocalPlayer.Backpack["[Revolver]"].Handle
     }
@@ -182,7 +182,12 @@ game:GetService("ReplicatedStorage"):FindFirstChild(".gg/untitledhood"):FireServ
 end)
 
 misc:addButton("Fake Banned แบนปลอม", function()
-    game.Players.LocalPlayer:Kick("You Got Banned Form Untitled Hood!")
+    game.Players.LocalPlayer:Kick("User Banned")
+end)
+
+misc:addButton("Anti AFK", function()
+    game:GetService('VirtualUser'):CaptureController()
+    game:GetService('VirtualUser'):Button1Down(Vector2.new(1280,672))
 end)
 
 drop:addToggle("Auto Drop 100K","" , function(abcd)
